@@ -1,3 +1,4 @@
+//import function from react, digibuttons, Operationbutton
 import { useReducer } from "react"
 import DigitButton from "./DigitButtons"
 import OperationButton from "./OperationButton"
@@ -10,7 +11,7 @@ export const ACTIONS = {
   DELETE_DIGIT: "delete-digit",
   EVALUATE: "evaluate",
 }
-
+//create functon reducer and logic start
 function reducer(state, { type, payload }) {
   switch (type) {
     case ACTIONS.ADD_DIGIT:
@@ -156,6 +157,7 @@ function App() {
       <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>
         DEL
       </button>
+
       <OperationButton operation="÷" dispatch={dispatch} />
       <DigitButton digit="1" dispatch={dispatch} />
       <DigitButton digit="2" dispatch={dispatch} />
